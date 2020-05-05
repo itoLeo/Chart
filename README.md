@@ -2,23 +2,17 @@
 
 
 ## デプロイ環境
-```
-https://eloquent-edison-4d56ec.netlify.app/
-```
+<https://eloquent-edison-4d56ec.netlify.app/>
 
 ## Chart.jsインストール
 ```
 yarn add vue-chartjs chart.js
 ```
 
-```
-https://qiita.com/kiyc/items/a94a202bf06fff644f62
-```
+<https://qiita.com/kiyc/items/a94a202bf06fff644f62>
 
-## Netify導入参考サイト
-```
-https://qiita.com/tiwu_official/items/5d1e883b3190cd8de56f
-```
+## Netlify導入参考サイト
+<https://qiita.com/tiwu_official/items/5d1e883b3190cd8de56f>
 
 ### Compiles and hot-reloads for development
 ```
