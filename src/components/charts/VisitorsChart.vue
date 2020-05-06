@@ -4,7 +4,7 @@ import { Line } from 'vue-chartjs'
 export default {
   // importでBar（棒）もしくはLine（折れ線）を読み込みextendsで表のタイプを定義
   extends: Line,
-  name: 'chart',
+  name: 'VisitorsChart',
   data () {
     return {
       data: {
@@ -12,9 +12,9 @@ export default {
         datasets: [
           {
             type: 'line',
-            label: '入場者数履歴',
-            data: [1,2,3,4,5,6,7,8,9,0,1],
-            backgroundColor: 'rgba(60, 160, 220, 0.3)',
+            label: '2020',
+            data: [1,2,3,4,5,6,7,8,9,0,11,15],
+            borderColor: "#7A3B00"
           }
         ],
       },

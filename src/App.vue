@@ -1,28 +1,19 @@
 <template>
   <div id="app">
-    <div>
-      <Chart class="small"/>
-    </div>
-    <!-- <div class="small">
-      <Chart/>
-    </div> -->
+    <DashBoard/>
   </div>
 </template>
 
 <script>
-import Chart from './components/Chart.vue'
+import DashBoard from './components/DashBoard.vue'
 
 export default {
   name: 'App',
   components: {
-    Chart
+    DashBoard
   }
 }
 </script>
 
 <style>
-.small {
-  border: 4px solid #C4C4C4;
-  height: 200px;
-}
 </style>
