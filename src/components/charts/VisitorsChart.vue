@@ -14,7 +14,9 @@ export default {
             type: 'line',
             label: '2020',
             data: [1,2,3,4,5,6,7,8,9,0,11,15],
-            borderColor: "#7A3B00"
+            borderColor: "#7A3B00",
+            // 線の丸みを消してカクカクさせる
+            lineTension: 0
           }
         ],
       },
