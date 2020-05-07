@@ -1,4 +1,5 @@
 <script>
+// 折れ線グラフのテンプレート読み込み.extendsで再定義
 import { Line } from 'vue-chartjs'
 
 export default {
@@ -12,6 +13,7 @@ export default {
         datasets: [
           {
             type: 'line',
+            // 本来チャートの上に表示されるラベルだが、optionのlegends/display:falseで非表示になっている
             label: '2020',
             data: [1,2,3,4,5,6,7,8,9,0,11,15],
             borderColor: "#7A3B00",
@@ -22,7 +24,11 @@ export default {
       },
       options: {
         //アスペクト比を維持しない設定。これでこれでcssによるサイズ変更が可能になる（変更後リロード必要）
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        // ラベルを非表示
+        legend: {
+          display: false
+        }
       }
     }
   },
