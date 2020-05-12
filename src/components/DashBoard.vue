@@ -1,43 +1,48 @@
 <template>
   <div>
-    <div class="history">
-      <div class="title">
-        入場者数履歴
-      </div>
-      <div class="label_change">
-        <div
-        class="label_select"
-        v-for="(label,index) in labels"
-        :key="label.index"
-        @click="historyClick(index)"
-        v-bind:class="{'label_now' : index == historyLabel}"
-        >
-          {{label}}
+    <div class="upper">
+      <div class="history">
+        <div class="title">
+          入場者数履歴
         </div>
-      </div>
-      <VisitorsChart class="chart"/>
-    </div>
-    <div class="current">
-      <div class="title">
-        現在入退場者数
+        <div class="label_change">
+          <div
+          class="label_select"
+          v-for="(label,index) in labels"
+          :key="label.index"
+          @click="historyClick(index)"
+          v-bind:class="{'label_now' : index == historyLabel}"
+          >
+            {{label}}
+          </div>
+        </div>
+        <component :is="currentType" />
+        <VisitorsChart class="chart"/>
       </div>
     </div>
-    <div class="stay">
-      <div class="title">
-        平均滞在時間
-      </div>
-      <div class="label_change">
-        <div
-        class="label_select"
-        v-for="(label,index) in labels"
-        :key="label.index"
-        @click="stayClick(index)"
-        v-bind:class="{'label_now' : index == stayLabel}"
-        >
-          {{label}}
+    <div class="rower">
+      <div class="current">
+        <div class="title">
+          現在入退場者数
         </div>
       </div>
-      <StayTimeChart class="chart"/>
+      <div class="stay">
+        <div class="title">
+          平均滞在時間
+        </div>
+        <div class="label_change">
+          <div
+          class="label_select"
+          v-for="(label,index) in labels"
+          :key="label.index"
+          @click="stayClick(index)"
+          v-bind:class="{'label_now' : index == stayLabel}"
+          >
+            {{label}}
+          </div>
+        </div>
+        <StayTimeChart class="chart"/>
+      </div>
     </div>
   </div>
 </template>
@@ -82,7 +87,6 @@ export default {
   border: 4px solid #C4C4C4;
 }
 .current {
-  display: inline-block;
   margin-top: 10px;
   margin-right: 10%;
   width: 45%;
@@ -90,7 +94,6 @@ export default {
 
 }
 .stay {
-  display: inline-block;
   margin-top: 10px;
   width: 45%;
   height: 334px;
@@ -101,21 +104,23 @@ export default {
 }
 
 .label_change {
-  margin: 6px 0;
+  display: flex;
   height: 16px;
+  margin-top: 4px;
   .label_select {
-    display: inline-block;
     width: 24px;
     text-align: center;
     background: #C4C4C4;
     font-size: 12px;
   }
   .label_now {
-    display: inline-block;
     width: 24px;
     text-align: center;
     background: #F2F2F2;
     font-size: 12px;
   }
+}
+.rower {
+  display: flex;
 }
 </style>
