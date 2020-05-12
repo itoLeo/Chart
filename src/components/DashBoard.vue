@@ -86,17 +86,10 @@ export default {
   box-sizing: border-box;
   border: 4px solid #C4C4C4;
 }
-.current {
-  margin-top: 10px;
-  margin-right: 10%;
-  width: 45%;
-  height: 334px;
-
-}
-.stay {
+.stay, .current {
   margin-top: 10px;
   width: 45%;
-  height: 334px;
+  // height: 334px;
 }
 .title {
   border-bottom: 1px solid #000000;
@@ -122,5 +115,6 @@ export default {
 }
 .rower {
   display: flex;
+  justify-content: space-between;
 }
 </style>
